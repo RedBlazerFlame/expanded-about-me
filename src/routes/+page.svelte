@@ -1,32 +1,28 @@
 <script lang="ts">
+	import { page } from "$app/stores";
 	import Scrollable from "$lib/Scrollable.svelte";
 	import { lerp, normalize } from "$lib/math_utils";
-
-	let scroll: number;
-    let height: number;
-    let width: number;
+	import FrontPage from "./FrontPage.svelte";
+	import { height, scroll, width } from "./screen_info";
 </script>
 
-<svelte:window bind:scrollY={scroll} bind:innerHeight={height} bind:innerWidth={width}/>
+<svelte:window bind:scrollY={$scroll} bind:innerHeight={$height} bind:innerWidth={$width}/>
 
-<Scrollable scrollFn={(scrollPos) => {
-    let t = normalize(0, height, scrollPos);
-
-    return [0, lerp(1, 0, t)];
-}}>
-    <p>Still immature and clumsy...</p>
-</Scrollable>
-
-<Scrollable scrollFn={(scrollPos) => {
-    let t = normalize(20, height * 2 + 20, scrollPos);
-
-    return [0, lerp(1, 0, t)];
-}}>
-    <p>Fragile and Lacking</p>
-</Scrollable>
+<FrontPage></FrontPage>
 
 <style lang="scss">
     :global(html) {
+        --background-shade-1: #031329;
+        --background-shade-2: #071C38;
+        --background-shade-3: #0B2547;
+        --background-shade-4: #0F2E56;
+        --background-shade-5: #123665;
+        
         min-height: 2000px;
+    }
+
+    :global(body) {
+        margin: 0px;
+        padding: 0px;
     }
 </style>
