@@ -39,10 +39,10 @@
 
 <Scrollable
     scrollFn={(scrollPos) => {
-        let t = normalize(0, $height, scrollPos);
+        let t = normalize(4 * $height - $width * 2 / 3, 5 * $height - $width * 2 / 3, scrollPos);
 
-        return [0, -(t - 2.75) * 1];
+        return [0, -t];
     }}
 >
-<img src={mountain4} style={`min-width: ${$width}px;`} alt="">
+<img src={mountain4} style={`min-width: ${$width}px; height: ${$width * 2 / 3}px; padding: 0px;`} alt="">
 </Scrollable>

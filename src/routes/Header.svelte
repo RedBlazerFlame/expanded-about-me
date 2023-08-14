@@ -16,7 +16,7 @@
         else return [0, -0.25 * (t - 1)];
 	}}
 >
-    <img src={stars} style={`background-color: var(--background-shade-5); width: 100vw; height: 100vh;`} alt="">
+    <img src={stars} style={`background-color: var(--background-shade-5); width: 100vw; height: 125vh;`} alt="">
 </Scrollable>
 
 <Scrollable
