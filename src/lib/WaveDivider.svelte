@@ -1,0 +1,7 @@
+<script lang="ts">
+	import { width } from "../routes/screen_info";
+
+    export let color: string;
+</script>
+
+<svg style={`width: ${$width}px; height: ${$width / 2};`} id="visual" viewBox="0 0 900 450" width="900" height="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 218L113 240L225 201L338 250L450 187L563 267L675 237L788 186L900 263L900 451L788 451L675 451L563 451L450 451L338 451L225 451L113 451L0 451Z" fill={color} stroke-linecap="square" stroke-linejoin="bevel"></path></svg>

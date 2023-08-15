@@ -40,8 +40,9 @@
 </Scrollable>
 
 <style>
+
     h1 {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 4rem;
     }
 
     @keyframes hover_arrow {

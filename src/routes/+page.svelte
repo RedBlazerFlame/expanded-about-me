@@ -10,12 +10,16 @@
 
 <svelte:window bind:scrollY={$scroll} bind:innerHeight={$height} bind:innerWidth={$width}/>
 
+<svelte:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</svelte:head>
+
 <Header></Header>
 <MountainTransition></MountainTransition>
 <AboutMe></AboutMe>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Space+Mono&display=swap');
 
     :global(html) {
         --background-shade-1: #031329;
@@ -35,7 +39,7 @@
     }
 
     :global(h1, h2, h3, h4, h5, h6) {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Bricolage Grotesque', sans-serif;
         color: white;
     }
 

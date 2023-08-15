@@ -10,18 +10,18 @@
 </script>
 <Scrollable
     scrollFn={(scrollPos) => {
-        let t = normalize(0, $height, scrollPos);
+        let t = normalize(4 * $height - $width * 2 / 3, 5 * $height - $width * 2 / 3, scrollPos);
 
-        return [0, -(t - 1.5) * 0.35];
+        return [0, -(t) * 0.35];
     }}
 >
 <img src={mountain1} style={`min-width: ${$width}px;`} alt="">
 </Scrollable>
 <Scrollable
     scrollFn={(scrollPos) => {
-        let t = normalize(0, $height, scrollPos);
+        let t = normalize(4 * $height - $width * 2 / 3, 5 * $height - $width * 2 / 3, scrollPos);
 
-        return [0, -(t - 2) * 0.55];
+        return [0, -(t) * 0.55];
     }}
 >
 <img src={mountain2} style={`min-width: ${$width}px;`} alt="">
@@ -29,9 +29,9 @@
 
 <Scrollable
     scrollFn={(scrollPos) => {
-        let t = normalize(0, $height, scrollPos);
+        let t = normalize(4 * $height - $width * 2 / 3, 5 * $height - $width * 2 / 3, scrollPos);
 
-        return [0, -(t - 2.5) * 0.75];
+        return [0, -(t) * 0.75];
     }}
 >
 <img src={mountain3} style={`min-width: ${$width}px;`} alt="">
