@@ -5,6 +5,7 @@
 	import AboutMe from "./AboutMe.svelte";
 	import Header from "./Header.svelte";
 	import MountainTransition from "./MountainTransition.svelte";
+	import SkillsSection from "./SkillsSection.svelte";
 	import { height, scroll, width } from "./screen_info";
 </script>
 
@@ -17,6 +18,7 @@
 <Header></Header>
 <MountainTransition></MountainTransition>
 <AboutMe></AboutMe>
+<SkillsSection></SkillsSection>
 
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Space+Mono&display=swap');
@@ -28,7 +30,7 @@
         --background-shade-4: #0F2E56;
         --background-shade-5: #123665;
         
-        min-height: 100000px;
+        height: 15000px;
     }
 
     :global(body) {
@@ -51,6 +53,12 @@
 
     :global(.tight) {
         margin: 0px;
+    }
+
+    :global(.decorated_card) {
+        border: 0px solid transparent;
+        
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 1px 8px rgba(0, 0, 0, 0.5);
     }
 
     // :global(.content_box) {

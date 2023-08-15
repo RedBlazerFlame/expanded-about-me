@@ -34,7 +34,7 @@
 
 <Scrollable
 	scrollFn={(scrollPos) => {
-		let t = normalize(5 * $height - $width / 2, 6 * $height - $width / 2, scrollPos);
+		let t = normalize(5 * $height - $width / 2 + 2, 6 * $height - $width / 2 + 2, scrollPos);
 
 		return [0, -t];
 	}}
@@ -52,7 +52,7 @@
 >
 	<div
 		class="tight"
-		style="background-color:var(--background-shade-3); height: 170vh; min-width: 100vw; padding: 30px;"
+		style="background-color:var(--background-shade-3); height: calc(200vh - 10px); min-width: 100vw; padding: 30px;"
 	>
 		<div class="container">
 			<img
@@ -155,6 +155,16 @@
 			</div>
 		</div>
 	</div>
+</Scrollable>
+
+<Scrollable
+	scrollFn={(scrollPos) => {
+		let t = normalize(7 * $height - $width / 2, 8 * $height - $width / 2, scrollPos);
+
+		return [0, -t];
+	}}
+>
+	<WaveDivider color={COLORS.BACKGROUND_SHADE_4} />
 </Scrollable>
 
 <style lang="scss">
